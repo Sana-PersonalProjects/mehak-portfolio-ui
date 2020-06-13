@@ -1,3 +1,17 @@
-<nav class="navbar navbar-light" id="header">
-    <div id="logo" href="#"> Mehak's portfolio</div>
-</nav>
+<div class="wrapper">
+    <nav class="navbar navbar-light" id="header" (click)="toggleMenu()">
+        <div class="menubar">
+            <div [ngClass]="status ? 'cross':'menu'">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <ng-template [ngIf]="status" >
+                <div class="menuItem">Portfolio</div>
+                <div class="menuItem">Contact Info</div>
+            </ng-template>
+        </div>
+        
+        <div id="logo"> Mehak's portfolio</div>
+    </nav>
+</div>
